@@ -1,0 +1,11 @@
+  {
+    "name": "Distraction Alert",
+    "version": "1.0",
+    "description": "Show you how much time have passed since you started browsing distracting websites.",
+    "manifest_version": 2,
+    "content_scripts": [{
+    	"matches": ["*://www.youtube.com/*"],
+    	"js": ["script.js"],
+    	"css": ["styles.css"]
+    }]
+  }
