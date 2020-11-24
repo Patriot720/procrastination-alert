@@ -12,7 +12,7 @@ var bar = {
     ],
     nextMsg: 0,
     startTime: Date.now(),
-    indulgingTime: 25
+    indulgingTime: 20
 };
 
 bar.node = document.createElement('div');
