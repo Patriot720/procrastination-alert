@@ -6,13 +6,13 @@ var bar = {
     slideOut: null,
     messages: [
         '',
-        'Go for a walk if you feel bored.',
         'Time to get back to work.',
-        'Go to bed early if you are tired.'
+        'Or go for a walk if you feel bored.',
+        'Or Go to bed early if you are tired.'
     ],
     nextMsg: 0,
     startTime: Date.now(),
-    indulgingTime: 20
+    indulgingTime: 25
 };
 
 bar.node = document.createElement('div');
@@ -21,6 +21,8 @@ bar.node.id = 'da-bar';
 bar.msgNode = document.createElement('p');
 bar.msgNode.classList.add('da-msg', 'da-fade-in');
 bar.msgNode.innerHTML = `Enjoy the site for now. Will send you gentle reminders in ${bar.indulgingTime} minutes.`;
+
+bar.node.style.minWidth = Math.max( ...bar.messages.map((m)=>m.length) )*12 + 'px';
 
 bar.node.appendChild(bar.msgNode);
 
@@ -50,12 +52,13 @@ bar.start = ()=>{
     bar.slideIn();
     setTimeout(()=>{
         bar.slideOut();
+        bar.switchMsg();
 
         setTimeout(()=>{
             bar.slideIn();
             var t = setInterval(bar.switchMsg, 5000);
         }, 1000 * 60 * bar.indulgingTime);
-    }, 1000*7);
+    }, 1000*6);
 };
 
 bar.start();
