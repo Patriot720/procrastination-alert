@@ -1,7 +1,7 @@
 # procrastination-alert
 
 Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter to help you beat procrastination.
-(http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-3.42.32-PM-1.jpg)
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-3.42.32-PM-1.jpg" style="width: 800px" >
 
 ## Installation
 
