@@ -2,8 +2,6 @@
 
 Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter to help you beat procrastination.
 
-<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-3.42.32-PM-1.jpg" style="width: 640px !important;" >
-
 ## Installation
 
 - Download the whole repository as a zip file using the upper right green button.
@@ -15,6 +13,8 @@ Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter
 ### Usage
 
 You can adjust the amount of time after which the reminders will appear by clicking on the icon of this extension in the toolbar.
+
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-3.42.32-PM-1.jpg" style="width: 640px !important;" >
 
 When you stay in YouTube/Facebook/Twitter longer than the specified amount of time, gentle reminders will appear on those websites.
 
