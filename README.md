@@ -1,6 +1,6 @@
 # Chrome Extension: Procrastination Alert
 
-Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter to help you beat procrastination.
+Procrastination Alert displays gentle reminders on YouTube, Facebook and Twitter to help you beat procrastination.
 
 ## Installation
 
