@@ -1,7 +1,7 @@
 # procrastination-alert
 
 Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter to help you beat procrastination.
-<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-3.42.32-PM-1.jpg" style="width: 800px" >
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-3.42.32-PM-1.jpg" style="width: 640px; margin-top: 24px;" >
 
 ## Installation
 
@@ -17,13 +17,13 @@ You can adjust the amount of time after which the reminders will appear by click
 
 When you stay in YouTube/Facebook/Twitter longer than the specified amount of time, gentle reminders will appear on those websites.
 
-(http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.00.37-PM-1.jpg "Copy and paste horizontal paddings")
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.00.37-PM-1.jpg" style="width: 640px; margin-top: 24px;" >
 
-(http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.00.54-PM.jpg "Copy and paste vertical paddings 1")
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.00.54-PM.jpg" style="width: 640px; margin-top: 24px;" >
 
-(http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.01.04-PM.jpg "Copy and paste vertical paddings 2")
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.01.04-PM.jpg" style="width: 640px; margin-top: 24px;" >
 
-(http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.01.13-PM.jpg "Copy and paste vertical paddings 2")
+<img src="http://www.simon-li.com/design-and-code/wp-content/uploads/2020/11/Screen-Shot-2020-11-25-at-4.01.13-PM.jpg" style="width: 640px; margin-top: 24px;" >
 
 ### Feedback
 
