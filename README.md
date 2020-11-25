@@ -28,7 +28,7 @@ When you stay in YouTube/Facebook/Twitter longer than the specified amount of ti
 
 ### Feedback
 
-Any thoughts about the plugin? Send them to <info@simon-li.com>.
+Any thoughts about the extension? Send them to <info@simon-li.com>.
 
 
 ### Buy me a coffee
