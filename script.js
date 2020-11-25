@@ -13,7 +13,7 @@ var bar = {
     ],
     currMsg: -1,
     startTime: Date.now(),
-    indulgingTime: 1
+    indulgeTime: 25
 };
 
 bar.node = document.createElement('div');
@@ -21,7 +21,6 @@ bar.node.id = 'da-bar';
 
 bar.msgNode = document.createElement('p');
 bar.msgNode.classList.add('da-msg', 'da-fade-in');
-bar.msgNode.innerHTML = `Enjoy the site for now. Will send you gentle reminders in ${bar.indulgingTime} minutes.`;
 
 bar.node.style.minWidth = Math.max( ...bar.messages.map((m)=>m.length) )*12 + 'px';
 
@@ -69,11 +68,27 @@ bar.start = ()=>{
             bar.refreshMsg();
             bar.slideIn();
             var t = setInterval(bar.switchMsg, 5000);
-        }, 1000 * 60 * bar.indulgingTime);
+        }, 1000 * 60 * bar.indulgeTime);
     }, 1000*6);
 };
 
-bar.start();
+chrome.storage.sync.get('enabled', (result)=>{
+    if (result.enabled){
+
+        chrome.storage.sync.get('indulgeTime', (result)=>{
+            if (result && result.indulgeTime && typeof(result.indulgeTime) === 'number'){
+                bar.indulgeTime = result.indulgeTime;
+            } else{
+                bar.indulgeTime = 25;
+            }
+            
+            bar.msgNode.innerHTML = `Enjoy the site for now. Will send you gentle reminders in ${bar.indulgeTime} minutes.`;
+            bar.start();
+        });
+
+    }
+});
+
 
 
 

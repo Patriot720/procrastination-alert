@@ -1,7 +1,7 @@
   {
     "name": "Procrastination Alert",
     "version": "1.0",
-    "description": "Gentle reminders displayed on distracting websites to help you beat procrastination.",
+    "description": "Gentle reminders displayed on YouTube, Facebook and Twitter to help you beat procrastination.",
     "manifest_version": 2,
     "icons": {                  
       "16": "icon-16.png",         
@@ -14,6 +14,7 @@
       "default_title": "Procrastination Alert",
       "default_popup": "popup.html"
     },
+    "permissions": ["storage"],
     "content_scripts": [{
     	"matches": ["*://www.youtube.com/*", "*://twitter.com/*", "*://www.facebook.com/*"],
     	"js": ["script.js"],

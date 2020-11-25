@@ -1,3 +1,103 @@
+.da-popup{
+	background-color: rgb(0,0,0,.05);
+	margin: 0;
+	font-size: 16px;
+	width: 14em;
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+input[type=button]{
+	padding: .25rem 1rem;
+}
+
+input[type=button] + input[type=button]{
+	margin-left: 0.5rem;
+}
+
+p{
+	margin: 0;
+}
+
+p.footer{
+	font-size: 0.75em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.da-logo{
+	background-color: #fff;
+	padding: 1em;
+}
+
+.da-logo p{
+	margin-top: 1em;
+	font-size: 0.75em;
+}
+
+.da-logo img{
+	width: 64px;
+	height: auto;
+}
+
+.da-indulging-time-regular{
+	display: block;
+	margin-top: 0.5em;
+}
+
+.da-indulging-time-regular > p:first-child, .da-indulging-time-edit > p:first-child{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.da-indulging-time-edit{
+	display: none;
+	margin-top: 0.5em;
+}
+
+.da-enabled, .da-disabled{
+	padding: 1em;
+}
+
+.da-disabled{
+	display: none;
+}
+
+.da-popup-disabled .da-disabled{
+	display: block;
+}
+
+.da-enabled p:last-child, .da-disabled p:last-child{
+	margin-top: 1em;
+}
+
+.da-popup-disabled .da-enabled{
+	display: none;
+}
+
+.da-popup-edit .da-indulging-time-regular{
+	display: none;
+}
+
+.da-popup-edit .da-indulging-time-edit{
+	display: block;
+}
+
+.da-digits{
+	font-size: 2rem;
+	line-height: 2rem;
+	margin-right: 0.5rem;
+}
+
+input.da-digits{
+	max-width: 4rem;
+	border-width: 0;
+	height: 2rem;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
 #da-bar{
 	background-color: rgb(0,100,200);
 	line-height: 16px;
