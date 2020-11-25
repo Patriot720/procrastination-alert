@@ -8,8 +8,8 @@ Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter
 
 - Download the whole repository as a zip file using the upper right green button.
 - Unzip.
-- Go to chrome://extensions in your chrome browser.
-- Turn on Developer mode and click Load unpacked.
+- Go to `chrome://extensions` in your chrome browser.
+- Turn on #Developer mode# and click #Load unpacked#.
 - Select the folder you just unzipped.
 
 ### Usage
