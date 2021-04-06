@@ -22,23 +22,23 @@ bar.node.id = 'da-bar';
 bar.msgNode = document.createElement('p');
 bar.msgNode.classList.add('da-msg', 'da-fade-in');
 
-bar.node.style.minWidth = Math.max( ...bar.messages.map((m)=>m.length) )*12 + 'px';
+bar.node.style.minWidth = Math.max(...bar.messages.map((m) => m.length)) * 12 + 'px';
 
 bar.node.appendChild(bar.msgNode);
 
-bar.refreshMsg = ()=>{
+bar.refreshMsg = () => {
     bar.msgNode.innerHTML = bar.messages[bar.currMsg];
-    if (bar.currMsg === 0){
-        var minutes = Math.floor( (Date.now() - bar.startTime)/1000/60 );
+    if (bar.currMsg === 0) {
+        var minutes = Math.floor((Date.now() - bar.startTime) / 1000 / 60);
         bar.msgNode.innerHTML = `You have spent <span class="da-minute">${minutes}</span> minutes on this site.`
-    } else if (bar.currMsg === 1){
-        bar.msgNode.innerHTML = `<span class="da-minute">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>`;
+    } else if (bar.currMsg === 1) {
+        bar.msgNode.innerHTML = `<span class="da-minute">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>`;
     }
 };
 
-bar.switchMsg = ()=>{
+bar.switchMsg = () => {
     bar.msgNode.classList.remove('da-fade-in');
-    setTimeout(()=>{
+    setTimeout(() => {
         bar.currMsg++;
         bar.currMsg %= bar.messages.length;
         bar.refreshMsg();
@@ -47,45 +47,52 @@ bar.switchMsg = ()=>{
 };
 
 
-bar.slideIn = ()=>{
+bar.slideIn = () => {
     bar.node.classList.add('da-slide-in');
 };
 
-bar.slideOut = ()=>{
+bar.slideOut = () => {
     bar.node.classList.remove('da-slide-in');
 };
 
-bar.start = ()=>{
+bar.start = () => {
     document.getElementsByTagName('html')[0].prepend(bar.node);
-    
-    setTimeout(()=>{bar.slideIn();}, 1000);
 
-    setTimeout(()=>{
+    setTimeout(() => { bar.slideIn(); }, 1000);
+
+    setTimeout(() => {
         bar.slideOut();
         bar.switchMsg();
 
-        setTimeout(()=>{
+        setTimeout(() => {
             bar.refreshMsg();
             bar.slideIn();
             var t = setInterval(bar.switchMsg, 5000);
         }, 1000 * 60 * bar.indulgeTime);
-    }, 1000*6);
+    }, 1000 * 6);
 };
 
-chrome.storage.sync.get('enabled', (result)=>{
-    if (result.enabled){
+function inBlockedWebsites(url, blockedWebsites) {
+    for (website of blockedWebsites) {
+        if (url.includes(website))
+            return true;
+    }
+    return false;
+}
 
-        chrome.storage.sync.get('indulgeTime', (result)=>{
-            if (result && result.indulgeTime && typeof(result.indulgeTime) === 'number'){
-                bar.indulgeTime = result.indulgeTime;
-            } else{
-                bar.indulgeTime = 25;
-            }
-            
-            bar.msgNode.innerHTML = `Enjoy the site for now. Will send you gentle reminders in ${bar.indulgeTime} minutes.`;
-            bar.start();
-        });
+chrome.storage.sync.get(['enabled', 'blockedWebsites'], ({ enabled, blockedWebsites }) => {
+    if (enabled && blockedWebsites && blockedWebsites.length) {
+        if (inBlockedWebsites(location.href, blockedWebsites))
+            chrome.storage.sync.get('indulgeTime', (result) => {
+                if (result && result.indulgeTime && typeof (result.indulgeTime) === 'number') {
+                    bar.indulgeTime = result.indulgeTime;
+                } else {
+                    bar.indulgeTime = 25;
+                }
 
+                bar.msgNode.innerHTML = `Enjoy the site for now. Will send you gentle reminders in ${bar.indulgeTime} minutes.`;
+                bar.start();
+            });
     }
 });
 

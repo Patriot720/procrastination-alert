@@ -135,3 +135,6 @@ input.da-digits{
 	font-weight: 700;
 }
 
+.da-remove-blocked-website-btn{
+	cursor:pointer;
+}

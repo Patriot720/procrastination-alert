@@ -6,14 +6,22 @@
             <p>Procrastination alert displays gentle reminders on YouTube, Facebook and Twitter to help you beat procrastination.</p>
         </div>
         <div class="da-enabled">
-            <p>Show reminders in</p>
-            <div class="da-indulging-time-regular">
+            <div class="da-indulging-time-regular" id="da-indulging-time-menu">
+                <p>Show reminders in</p>
                 <p><span class="da-digits">0</span> <span class="da-str-min">minutes</span></p>   
                 <p><input id="da-edit" type="button" value="Edit"><input id="da-disable" type="button" value="Disable"></p>
+                <p><input id="da-edit-blocked-websites" type="button" value="Edit websites"></p>
             </div>
             <div class="da-indulging-time-edit">
                 <p><input class="da-digits" type="text" value="0"> <span class="da-str-min">minutes</span></p>   
                 <p><input id="da-ok" type="button" value="OK"></p>
+            </div>
+            <div id="da-indulging-sites-edit-container" class="da-indulging-sites-edit da-disabled">
+                <div id="da-indulging-sites-links-container">
+                </div>
+                <p><input class="da-link" id="da-indulging-sites-input" type="text" value=""></p>
+                <p><input id="da-indulging-sites-add-btn" type="button" value="ADD"></p>
+                <p><input id="da-back-from-indulging-websites-btn" type="button" value="BACK"></p>
             </div>
         </div>
         <div class="da-disabled">

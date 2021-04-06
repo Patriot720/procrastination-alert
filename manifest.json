@@ -14,9 +14,9 @@
       "default_title": "Procrastination Alert",
       "default_popup": "popup.html"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage","tabs", "http://*/*"],
     "content_scripts": [{
-    	"matches": ["*://www.youtube.com/*", "*://twitter.com/*", "*://www.facebook.com/*"],
+    	"matches": ["*://*/*"],
     	"js": ["script.js"],
     	"css": ["styles.css"]
     }]
